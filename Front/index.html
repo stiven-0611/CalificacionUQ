@@ -81,7 +81,7 @@
                       $.get('token.php?code=' + code, function (access_token) {
                         // Step 7
                         $('#access_token').val(access_token);
-                        $.getJSON('https://api.github.com/user?access_token=' + access_token, function (user) {
+                        $.getJSON('https://github.com/login/oauth/access_token?' + access_token, function (user) {
                           $('#username').val(user.login);
                         });
                       });
