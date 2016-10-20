@@ -7,7 +7,7 @@
                 <img class="activator" src="../img/perfil.JPG" style="width: 20%;   ">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Codigo fuente<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">Ver Codigo fuente<i class="material-icons right">more_vert</i></span>
                 <p><a href="#">Miller Aguirre</a></p>
               </div>
               <div class="card-reveal">
@@ -32,17 +32,49 @@
             </div>
 
             <div class="row">
-                <form class="col s12">
+
+                  <table class="striped">
+                    <thead>
+                      <tr>
+                          <th data-field="id">Requerimiento</th>
+                          <th data-field="name">Nota</th>
+                          <th data-field="name">Porcentaje</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>Presentacion</td>
+                        <td><input value="" id="" type="number" class="validate"></td>
+                        <td>10%</td>
+
+                      </tr>
+                      <tr>
+                        <td>Diseño</td>
+                        <td><input value="" id="" type="number" class="validate"></td>
+                        <td>20%</td>
+                      </tr>
+                      <tr>
+                        <td>Calidad de Codigo</td>
+                        <td><input value="" id="" type="number" class="validate"></td>
+                        <td>70%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                
                    <div class="row">
                     <div class="input-field col s12">
                       <textarea id="textarea1" class="materialize-textarea" length="120" ></textarea>
                       <label for="textarea1">Observaciones del docente</label>
-                      <button class="btn waves-effect teal" >Guardar
+                      <button class="btn waves-effect teal">Guardar
                       <i class="material-icons right">send</i> 
-
                     </div>
                   </div>
-                </form>
+                
+
+
               </div>
        </div>
       
