@@ -1,0 +1,22 @@
+
+<div class="card-panel">
+
+  <form action="#" method="post" id="formulario" novalidate="novalidate">
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="Actividad" id="activity" type="text" class="validate">
+      </div>
+      <div class="input-field col s12">
+        <textarea id="description" placeholder="Breve descripción de la actividad" class="materialize-textarea"></textarea>
+      </div>
+      <div class="input-field col s12">
+        <input type="date" class="datepicker" id="date">
+      </div>
+    
+      <div class="col s12">
+        <a type="submit" class="col s1 push-s5 btn btn-default" value="submit" onclick="validarCampos()"><i class="material-icons">done</i></a>
+        <a type="submit" class="col s1 push-s5 btn btn-default" value="submit" onclick="cancel()"><i class="material-icons">clear</i></a>
+      </div>
+    </div>
+  </form>
+</div>
