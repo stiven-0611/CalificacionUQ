@@ -5,11 +5,19 @@ $data = 'client_id=' . '46779082d184c98cdcdb' . '&' .
 		'code=' . urlencode($_GET['code']);
 		$url ='https://github.com/login/oauth/access_token?'.$data;
 
-print_r($url);
+print_r($data);
+
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($ch);
-print_r($response);
+
+preg_match('/access_token=([0-9a-f]+)/', $response, $out);
+echo $out[1];
 curl_close($ch);
+//$ch = curl_init($url);
+//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//$response = curl_exec($ch);
+//print_r($response);
+//curl_close($ch);
 
 ?>
