@@ -1,3 +1,5 @@
+<!-- Pagina de inicio que el permite el logeo por github -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,14 +15,10 @@
 
   <title>Document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
 </head>
-
-
-
-
 
 <body>
   <div class="navbar-fixed">
@@ -59,48 +57,39 @@
             </button>
             <br>
 
-
-                  <label>code <input type="text" id="code"></input></label>
-                  <label>access_token <input type="text" id="access_token"></input></label>
-                  <label>username <input type="text" id="username"></input></label>
-
-
-                  <script>
-                                  // Step 2
-                    $('#login').click(function () {
-                      window.open('https://github.com' + 
-                        '/login/oauth/authorize' + 
-                        '?client_id=46779082d184c98cdcdb' +
-                        '&scope=gist');
-                    });
-                    // Step 4
-                    window.addEventListener('message', function (event) {
-                      var code = event.data;
-                      $('#code').val(code);
-                      // Step 5
-                      $.get('token.php?code=' + code, function (access_token) {
-                        // Step 7
-                        $('#access_token').val(access_token);
-                        $.getJSON('https://github.com/login/oauth/access_token?' + access_token, function (user) {
-                          $('#username').val(user.login);
-                        });
-                      });
-                    });
-                                   
-                                      </script>
+          <label>code <input type="text" id="code"></input></label>
+          <label>access_token <input type="text" id="access_token"></input></label>
+          <label>username <input type="text" id="username"></input></label>
 
 
+          <script>
+                          // Step 2
+            $('#login').click(function () {
+              window.open('https://github.com' + 
+                '/login/oauth/authorize' + 
+                '?client_id=46779082d184c98cdcdb' +
+                '&scope=gist');
+            });
+            // Step 4
+            window.addEventListener('message', function (event) {
+              var code = event.data;
+              $('#code').val(code);
+              // Step 5
+              $.get('token.php?code=' + code, function (access_token) {
+                // Step 7
+                $('#access_token').val(access_token);
+                $.getJSON('https://github.com/login/oauth/access_token?' + access_token, function (user) {
+                  $('#username').val(user.login);
+                });
+              });
+            });
+          </script>
 
-            </div>
-          </div>
-        </form>
+        </div>
       </div>
-    </div>
-  
-
-
-
-
+    </form>
+  </div>
+</div>
   </main>
 
 

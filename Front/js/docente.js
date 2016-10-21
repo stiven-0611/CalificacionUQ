@@ -1,3 +1,6 @@
+/* 
+	Funcion que permite cargar de manera dinamica las vistas de la plataforma
+*/
 function cargarVista(nombreVista) {
 	var url = "../viewsDocente/" + nombreVista + ".html";
 
@@ -6,51 +9,47 @@ function cargarVista(nombreVista) {
 	});
 }
 
+//Carga la vista por defecto en lo que se ve por primera vez
 cargarVista("misCursos");
+
+/*
+	Funcion que al dar click en cancelar en la plantilla agregar nueva actividad nos retorna a la lista de actividades
+*/
+function cancel (){
+	cargarVista("listaActividades");
+}
+
+/*
+	Valida que todos los campos esten deligenciados y carga los datos agregados al final de la lista de actividades
+*/
+function validar (){
+
+	var activity = $("#activity").val();
+	var fecha = $("#date").val();
+
+	if(activity!==""){
+		if(fecha!==""){
+			alert("Nueva actividad sera agregada: "+ activity +" con fecha de entrega: " + fecha);
+			cargarVista("listaActividades");
+		} else {		
+			alert("Seleccione una fecha limite de plazo para la entrega de la actividad");
+			cargarVista("nuevo");
+		}
+	} else {		
+		alert("Asignele un nombre a la actividad que desea crear");
+		cargarVista("nuevo");
+	}
+	
+}
 
 $(document).ready(function(){
 
 	$('.datepicker').pickadate({
-	    selectMonths: true, // Creates a dropdown to control month
-	    selectYears: 15 // Creates a dropdown of 15 years to control year
-	 });
+	    selectMonths: true, // Crea un dropdown para el control de los meses
+	    selectYears: 15 // Crea un control de 15 años en el calendario
+	});
 
-	 $('#description').trigger('autoresize');
-
-	 $('#formulario').validate ({
-	 	rules:{
-	 		activity: "required",
-	 		date: "required"
-	 	},
-
-	 	messages:{
-	 		activity: "Asignele un nombre a la actividad",
-	 		date: "Seleccione una fecha para la entrega"
-	 	},
-
-	 	submitHandler: function() {
-	 		var activity = $("#actividad").val();
-	 		var fecha = $("#date").val();
-      var now = $.now();
-      var date = new Date(now);
-
-      var elemNuevo = $('<tr><td class="nameActivity"> </td> <td class="dateActivity"> </td> </tr>');
-
-      elemNuevo.find(".nameActivity").text(activity);
-
-      elemNuevo.find(".dateActivity").text(fecha);
-
-      elemNuevo.appendTo("#tablaActividades");
-
-	 	}
-	 });
+	//Campo de texto donde se describe la actividad a agregar. Esta funcion permite el reajuste en el tamaño del cajon de texto
+	$('#description').trigger('autoresize');
 
 });
-
-function cancel (){
-	var url = "../viewsDocente/listaActividades.html";
-
-	$.get(url, function(respuestaServer) {
-		$("#contenedor").html(respuestaServer);
-	});
-}

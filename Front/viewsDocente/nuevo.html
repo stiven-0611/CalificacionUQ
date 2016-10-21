@@ -1,22 +1,24 @@
+<!-- Formulario que permite crear una nueva tarea y agregarla a la lista de actividades -->
 
 <div class="card-panel">
 
-  <form action="#" method="post" id="formulario" novalidate="novalidate">
+  <form action="#" method="post" id="form" novalidate="novalidate">
     <div class="row">
       <div class="input-field col s12">
-        <input placeholder="Actividad" id="activity" type="text" class="validate">
+        <input placeholder="Actividad" id="activity" name="activity" type="text" class="validate">
       </div>
       <div class="input-field col s12">
-        <textarea id="description" placeholder="Breve descripción de la actividad" class="materialize-textarea"></textarea>
+        <textarea id="description" name="description" placeholder="Breve descripción de la actividad" class="materialize-textarea"></textarea>
       </div>
       <div class="input-field col s12">
-        <input type="date" class="datepicker" id="date">
+        <input type="date" class="datepicker" id="date" name="date">
       </div>
     
       <div class="col s12">
-        <a type="submit" class="col s1 push-s5 btn btn-default" value="submit" onclick="validarCampos()"><i class="material-icons">done</i></a>
-        <a type="submit" class="col s1 push-s5 btn btn-default" value="submit" onclick="cancel()"><i class="material-icons">clear</i></a>
+        <button type="submit" class="col s1 push-s5 btn btn-default" onclick="validar()"><i class="material-icons">done</i></button>
       </div>
     </div>
   </form>
 </div>
+
+<a type="submit" class="col s1 push-s11 btn btn-default" value="submit" onclick="cancel()"><i class="material-icons">clear</i></a>

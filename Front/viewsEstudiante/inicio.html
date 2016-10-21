@@ -1,3 +1,4 @@
+<!-- Plantilla inicial que deja de manera estatica la barra de navegacion lateral la barra de navegacion posterior y el footer -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,6 +17,7 @@
   </head>
   
   <body>
+    <!-- barra de anvegacion -->
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper teal darken-4">
@@ -27,6 +29,7 @@
       </nav>
     </div>
 
+    <!-- Contenido principal de la plataforma -->
     <main> 
       <div class="row">
         <div class="col s4 m4 l2">
@@ -37,18 +40,20 @@
                 <a href="#!name"><span class="black-text name">Estudiante1</span></a>
               </div>
             </li>
-            <li><a href="javascript:void(0)" onclick="vistaEstudiante('cursosEstudiante')">Cursos</a></li>
+            <li><a href="javascript:void(0)" onclick="vistaEstudiante('CursosEstudiante')">Cursos</a></li>
             <li><a href="javascript:void(0)" onclick="vistaEstudiante('actividadesEstudiante')">Lista Actividades</a></li>
             <li><a href="javascript:void(0)" onclick="vistaEstudiante('enviarActividad')">Enviar Actividades</a></li>
           </ul>
         </div>
       
+        <!-- Seccion que permite cargar las diferentes funcionales de manera dinamica -->
         <div id="contenedor" class="col s8 m8 l10">
           <!-- Seccion donde se carga el contenido que se vaya seleccionando -->
         </div>
       </div>
     </main>
 
+    <!-- Footer de la plataforma -->
     <footer class="page-footer teal darken-3">
       <div class="container">
         <div class="row">

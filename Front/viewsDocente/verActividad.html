@@ -1,81 +1,70 @@
- 
-      </div>
-      
-          <div class="collection">
-            <div class="card">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="../img/perfil.JPG" style="width: 20%;   ">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Ver Codigo fuente<i class="material-icons right">more_vert</i></span>
-                <p><a href="#">Miller Aguirre</a></p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Codigo<i class="material-icons right">close</i></span>
-                <p> php
-                    // Step 6
-                    $data = 'client_id=' . '46779082d184c98cdcdb' . '&' .
-                        'client_secret=' . 'dfa919ee58a2c6ea1969ea7e4806d73d4f916da0' . '&' .
-                        'code=' . urlencode($_GET['code']);
+<!-- Permite visualizar una actividad que ya haya sido entregada -->
 
-                    $ch = curl_init('https://github.com/login/oauth/access_token');
-                    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    $response = curl_exec($ch);
-
-                    preg_match('/access_token=([0-9a-f]+)/', $response, $out);
-                    echo $out[1];
-                    curl_close($ch);
-                    
-                    </p>
-              </div>
-            </div>
-
-            <div class="row">
-
-                  <table class="striped">
-                    <thead>
-                      <tr>
-                          <th data-field="id">Requerimiento</th>
-                          <th data-field="name">Nota</th>
-                          <th data-field="name">Porcentaje</th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <td>Presentacion</td>
-                        <td><input value="" id="" type="number" class="validate"></td>
-                        <td>10%</td>
-
-                      </tr>
-                      <tr>
-                        <td>Diseño</td>
-                        <td><input value="" id="" type="number" class="validate"></td>
-                        <td>20%</td>
-                      </tr>
-                      <tr>
-                        <td>Calidad de Codigo</td>
-                        <td><input value="" id="" type="number" class="validate"></td>
-                        <td>70%</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-
-                
-                   <div class="row">
-                    <div class="input-field col s12">
-                      <textarea id="textarea1" class="materialize-textarea" length="120" ></textarea>
-                      <label for="textarea1">Observaciones del docente</label>
-                      <button class="btn waves-effect teal">Guardar
-                      <i class="material-icons right">send</i> 
-                    </div>
-                  </div>
-                
-
-
-              </div>
-       </div>
-      
+<div class="collection">
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="../img/perfil.JPG" style="width: 20%;   ">
     </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Ver Codigo fuente<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">Miller Aguirre</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Codigo<i class="material-icons right">close</i></span>
+      <p> php
+          // Step 6
+          $data = 'client_id=' . '46779082d184c98cdcdb' . '&' .
+              'client_secret=' . 'dfa919ee58a2c6ea1969ea7e4806d73d4f916da0' . '&' .
+              'code=' . urlencode($_GET['code']);
+
+          $ch = curl_init('https://github.com/login/oauth/access_token');
+          curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+          $response = curl_exec($ch);
+
+          preg_match('/access_token=([0-9a-f]+)/', $response, $out);
+          echo $out[1];
+          curl_close($ch);
+          
+          </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <table class="striped">
+      <thead>
+        <tr>
+          <th data-field="id">Requerimiento</th>
+          <th data-field="name">Nota</th>
+          <th data-field="name">Porcentaje</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Presentacion</td>
+          <td><input value="" id="" type="number" class="validate"></td>
+          <td>10%</td>
+        </tr>
+        <tr>
+          <td>Diseño</td>
+          <td><input value="" id="" type="number" class="validate"></td>
+          <td>20%</td>
+        </tr>
+        <tr>
+          <td>Calidad de Codigo</td>
+          <td><input value="" id="" type="number" class="validate"></td>
+          <td>70%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+ <div class="row">
+  <div class="input-field col s12">
+    <textarea id="textarea1" class="materialize-textarea" length="120" ></textarea>
+    <label for="textarea1">Observaciones del docente</label>
+    <button class="btn waves-effect teal">Guardar</button>
+    <i class="material-icons right">send</i> 
+  </div>
+</div>

@@ -1,3 +1,6 @@
+/* 
+	Funcion que permite cargar de manera dinamica las vistas de la plataforma
+*/
 function vistaEstudiante(nombreVista) {
 	var url = "../viewsEstudiante/" + nombreVista + ".html";
 
@@ -5,4 +8,6 @@ function vistaEstudiante(nombreVista) {
 		$("#contenedor").html(respuestaServer);
 	});
 }
-cargarVista("cursosEstudiante");
+
+//Carga la vista por defecto en lo que se ve por primera vez
+vistaEstudiante("CursosEstudiante");
