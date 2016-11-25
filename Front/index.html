@@ -10,7 +10,9 @@
   
   <!--Import materialize.css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
 
   <title>Document</title>
@@ -24,7 +26,7 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper teal darken-4">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#!" class="brand-logo">Academodle</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a></li>
       </ul>
@@ -33,34 +35,44 @@
   </div>
 
   <main>
-    <div class="container">
-      <div class="row main-section">
-        <form class="col s6 push-s3 teal lighten-5 formulario">
-          <div class="row">
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">vpn_key</i>
-                <input id="password" type="password" class="validate">
-                <label for="password">Password</label>
-              </div>
-            </div>
-            <div class="col s6 push-s4">
-              <button id="login" class="btn waves-effect teal">Entrar
-              <i class="material-icons right">send</i>
+   <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="img/uniquindio.png"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Este es el mejor sitio de Administración academica</h3>
+          <h5 class="light grey-text text-lighten-3">Acá podras encontrar las calificaciones</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/libros.JPG"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Estan todos los espacios academicos</h3>
+          <h5 class="light grey-text text-lighten-3">Acá podras subir tus trabajos</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/codig.JPG"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Ademas podras subir el código fuente</h3>
+          <h5 class="light grey-text text-lighten-3">Si. Es cierto puedes subir tú código fuente</h5>
+        </div>
+      </li>
+      <li>
+        <img src="img/formulas.JPG"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Y solo te debes loguear </h3>
+          <h5 class="light grey-text text-lighten-3">ingresa aquí con tu cuenta de Github</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+<br><br>
+            <div class="col s6 push-s4 center">
+              <button id="login" class="btn waves-effect teal">Ingresar 
+             <i class="fa fa-github fa-3x" aria-hidden="true"></i>
             </button>
             <br>
-
-          <label>code <input type="text" id="code"></input></label>
-          <label>access_token <input type="text" id="access_token"></input></label>
-          <label>username <input type="text" id="username"></input></label>
-
 
           <script>
                           // Step 2
@@ -118,6 +130,6 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-  
+  <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
